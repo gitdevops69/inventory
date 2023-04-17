@@ -11,5 +11,5 @@ RUN pip install click
 RUN pip install dnspython email-validator Flask
 RUN pip install Flask-Admin Flask-Bcrypt Flask-Login Flask-SQLAlchemy Flask-WTF greenlet idna itsdangerous Jinja2 MarkupSafe pycparser setuptools six SQLAlchemy Werkzeug WTForms xlwt
 COPY inventory_app /opt/inventory_app
-
+EXPOSE 5000
 ENTRYPOINT FLASK_APP=/opt/inventory_app/website/run.py flask run --host=0.0.0.0 
